@@ -1,0 +1,25 @@
+<div class="container mt-3">
+    <div class="jumbotron">
+        <h1 style="color:rgb(45, 45, 56);">Contamos con los siguientes productos:</h1>
+        <br>
+        {{#if products.length}}
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tr> <th scope="col">Nombre</th> <th scope="col">Descripcion</th> <th scope="col">Precio</th> <th scope="col">Foto</th></tr>
+                    {{#each products}}
+                    <tr>
+                        <td>{{name}}</td>
+                        <td>{{description}}</td>
+                        <td>${{price}}</td>
+                        <td><img src={{photo}} alt={{name}} width="100" height="150"></td>
+                    </tr>
+                    {{/each}}
+                </table>
+            </div>
+        {{else}}
+            <h3 class="alert alert-danger">No hay productos para listar</h1>
+        {{/if}}
+    </div>
+</div>
+
+
