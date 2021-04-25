@@ -39,10 +39,10 @@ const createHtmlEmail = (info) => {
 const registerEmail = async (email) => {
   try {
     await fs.promises.writeFile(file, email.email);
-    return `<h2>Email ${email.email} registrado correctamente!! </h2>`;
+    return `Email ${email.email} registrado correctamente!!`;
   } catch (error) {
     console.log(`Error en operación asincrónica de fs: ${error}`);
-    return `<h2>No se pudo registrar el email </h2>`;
+    return `No se pudo registrar el email`;
   }
 };
 
